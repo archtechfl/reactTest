@@ -91,8 +91,31 @@
 		return Header;
 	}(_react2.default.Component);
 
-	var BaseStation = function (_React$Component2) {
-		_inherits(BaseStation, _React$Component2);
+	var Footer = function (_React$Component2) {
+		_inherits(Footer, _React$Component2);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+
+		_createClass(Footer, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					'Footer goes here'
+				);
+			}
+		}]);
+
+		return Footer;
+	}(_react2.default.Component);
+
+	var BaseStation = function (_React$Component3) {
+		_inherits(BaseStation, _React$Component3);
 
 		function BaseStation() {
 			_classCallCheck(this, BaseStation);
@@ -111,7 +134,8 @@
 						'div',
 						null,
 						'Hello, user! I\'ve been expecting you.'
-					)
+					),
+					_react2.default.createElement(Footer, null)
 				);
 			}
 		}]);

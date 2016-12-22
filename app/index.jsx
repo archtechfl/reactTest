@@ -12,6 +12,16 @@ class Header extends React.Component {
 
 }
 
+class Footer extends React.Component {
+
+	render(){
+	  	return (
+	  		<div>Footer goes here</div>
+	  	);
+	  }
+
+}
+
 class BaseStation extends React.Component {
 
   render(){
@@ -19,6 +29,7 @@ class BaseStation extends React.Component {
   		<div>
 	  		<Header />
 	  		<div>Hello, user! I've been expecting you.</div>
+	  		<Footer />
 	  	</div>
   	);
   }
