@@ -68,27 +68,55 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var BaseStation = function (_React$Component) {
-	  _inherits(BaseStation, _React$Component);
+	var Header = function (_React$Component) {
+		_inherits(Header, _React$Component);
 
-	  function BaseStation() {
-	    _classCallCheck(this, BaseStation);
+		function Header() {
+			_classCallCheck(this, Header);
 
-	    return _possibleConstructorReturn(this, (BaseStation.__proto__ || Object.getPrototypeOf(BaseStation)).apply(this, arguments));
-	  }
+			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+		}
 
-	  _createClass(BaseStation, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'Hello, user! I\'ve been expecting you.'
-	      );
-	    }
-	  }]);
+		_createClass(Header, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					'Header goes here'
+				);
+			}
+		}]);
 
-	  return BaseStation;
+		return Header;
+	}(_react2.default.Component);
+
+	var BaseStation = function (_React$Component2) {
+		_inherits(BaseStation, _React$Component2);
+
+		function BaseStation() {
+			_classCallCheck(this, BaseStation);
+
+			return _possibleConstructorReturn(this, (BaseStation.__proto__ || Object.getPrototypeOf(BaseStation)).apply(this, arguments));
+		}
+
+		_createClass(BaseStation, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(Header, null),
+					_react2.default.createElement(
+						'div',
+						null,
+						'Hello, user! I\'ve been expecting you.'
+					)
+				);
+			}
+		}]);
+
+		return BaseStation;
 	}(_react2.default.Component);
 
 	// Render them
