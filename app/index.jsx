@@ -6,7 +6,7 @@ class BaseStation extends React.Component {
 
   render(){
   	return (
-  		<div>Hello, user!</div>
+  		<div>Hello, user! I've been expecting you.</div>
   	);
   }
 
