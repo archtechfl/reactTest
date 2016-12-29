@@ -10,7 +10,8 @@ class Header extends React.Component {
 	render(){
 	  	return (
 	  		<div>
-	  			<h1>Customized greeting follows:</h1>
+	  			<h1>My React JS project from the ground up:</h1>
+	  			<h2>Customized greeting follows:</h2>
 	  			<p>{this.props.greeting}</p>
 	  		</div>
 	  	);
@@ -43,8 +44,10 @@ class BaseStation extends React.Component {
 	render(){
 	  	return (
 	  		<div>
-		  		<Header greeting="Jeremy's First React from Scratch"/>
-		  		<div>Hello, user! I've been expecting you.</div>
+		  		<Header greeting="Jeremy's First React from scratch"/>
+		  		<div className="main-message">
+		  			<p>Hello, user! I've been expecting you.</p>
+		  		</div>
 		  		<Footer copyright="©2016-2017 Jeremy Moore. Licensed under MIT licence."/>
 		  	</div>
 	  	);

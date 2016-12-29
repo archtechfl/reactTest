@@ -4,9 +4,11 @@ module.exports = {
   entry: './app/index.jsx',
   output: {
     filename: 'bundle.js',
-    path: './dist'
+    path: './dist',
+    publicPath: "/dist/"
   },
   devtool: 'source-map',
+  devServer: { inline: true },
   module: {
     loaders: [
       {
