@@ -1,13 +1,14 @@
 {
   "name": "react-webpack-test",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "A progressive demonstration of basic React JS capabilities",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ReactJS", "JSX", "Babel", "Webpack"],
+  "author": "Jeremy Moore",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -16,7 +17,8 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "gulp-babel": "^6.1.2",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "react": "^15.4.1",

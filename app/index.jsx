@@ -26,7 +26,9 @@ class Footer extends React.Component {
 
 	render(){
 	  	return (
-	  		<div>Footer goes here</div>
+	  		<div>
+	  			<p>{this.props.copyright}</p>
+	  		</div>
 	  	);
 	}
 
@@ -43,7 +45,7 @@ class BaseStation extends React.Component {
 	  		<div>
 		  		<Header greeting="Jeremy's First React from Scratch"/>
 		  		<div>Hello, user! I've been expecting you.</div>
-		  		<Footer />
+		  		<Footer copyright="©2016-2017 Jeremy Moore. Licensed under MIT licence."/>
 		  	</div>
 	  	);
   	}
