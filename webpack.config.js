@@ -1,14 +1,18 @@
 var webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './app/index.jsx',
+  entry: [
+    './app/index.jsx',
+    './app/styles/app.less',
+  ],
   output: {
     filename: 'bundle.js',
     path: './dist',
     publicPath: "/dist/"
   },
   devtool: 'source-map',
-  devServer: { inline: true },
+  devServer: { inline: false },
   module: {
     loaders: [
       {
@@ -18,6 +22,10 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      { 
+        test: /\.less$/, 
+        loader: "style!css!less" 
       }
     ]
   },
