@@ -25,8 +25,11 @@ module.exports = {
       },
       { 
         test: /\.less$/, 
-        loader: "style!css!less" 
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
       }
     ]
   },
+  plugins: [
+      new ExtractTextPlugin("styles/style.css")
+  ]
 }
