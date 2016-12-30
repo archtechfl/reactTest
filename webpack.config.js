@@ -1,6 +1,10 @@
 var webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var lessLoader = ExtractTextPlugin.extract(
+  "css?sourceMap!less?sourceMap"
+);
+
 module.exports = {
   entry: [
     './app/index.jsx',
@@ -25,11 +29,12 @@ module.exports = {
       },
       { 
         test: /\.less$/, 
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader"),
-      }
+        exclude: /node_modules/, 
+        loader: lessLoader 
+      },
     ]
   },
   plugins: [
-      new ExtractTextPlugin("styles/style.css")
+      new ExtractTextPlugin("styles/style.css", {allChunks: true})
   ]
 }
