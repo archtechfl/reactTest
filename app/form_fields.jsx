@@ -4,7 +4,7 @@ class TextInput extends React.Component {
 
     constructor(props){
         super(props)
-        this.updateUserName = this.props.updateUserName;
+        this.updateContent = this.props.updateContent;
     }
 
     componentDidMount(){
@@ -15,7 +15,7 @@ class TextInput extends React.Component {
         return (
             <div>
                 <label>{this.props.label}</label>
-                <input type="text" onChange={this.updateUserName}/>
+                <input type="text" onChange={this.updateContent}/>
             </div>
         );
     }

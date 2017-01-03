@@ -26,7 +26,7 @@ class BaseStation extends React.Component {
         return (
             <div>
                 <Header greeting="Jeremy's First React from scratch"/>
-                <TextInput updateUserName={this.updateUserName.bind(this)} label="Enter your name here"/>
+                <TextInput updateContent={this.updateUserName.bind(this)} label="Enter your name here"/>
                 <RichTextBlock text={"Hello, " + this.state.user + "! I've been expecting you."}/>
                 <Footer copyright="©2016-2017 Jeremy Moore. Licensed under MIT licence."/>
             </div>
