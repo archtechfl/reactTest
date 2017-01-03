@@ -1,10 +1,6 @@
 var webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var lessLoader = ExtractTextPlugin.extract(
-  "css?sourceMap!less?sourceMap"
-);
-
 module.exports = {
   entry: [
     './app/index.jsx',
@@ -30,7 +26,7 @@ module.exports = {
       { 
         test: /\.less$/, 
         exclude: /node_modules/, 
-        loader: lessLoader 
+        loader: ExtractTextPlugin.extract("style?sourceMap", "css?sourceMap!autoprefixer?browsers=last 5 version!less?sourceMap"),
       },
     ]
   },
