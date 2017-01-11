@@ -6,10 +6,14 @@ export default class RichTextBlock extends React.Component {
         console.log("Rich text block mounted");
     }
 
+    createMarkup(){
+        return {__html: this.props.text};
+    }
+
     render(){
         return (
             <div className="rich-text-block">
-                <p>{this.props.text}</p>
+                <p dangerouslySetInnerHTML={this.createMarkup()}></p>
             </div>
         );
     }
