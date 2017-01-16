@@ -12,7 +12,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 
 gulp.task('compile-jsx', function () {
-  var bundler = browserify('app/index.jsx').transform(babelify);
+  var bundler = browserify({entries: ['app/index.jsx'], debug: true}).transform(babelify);
   bundle_js(bundler);
 })
 
