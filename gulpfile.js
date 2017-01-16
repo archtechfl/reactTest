@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 
 var sourcemaps = require("gulp-sourcemaps");
-var less = require('gulp-less-sourcemap');
+var less = require('gulp-less');
 var rename = require("gulp-rename");
 
 var source = require('vinyl-source-stream');
@@ -28,11 +28,9 @@ function bundle_js(bundler) {
 
 gulp.task('compile-less', function () {
   gulp.src('app/styles/app.less')
-    .pipe(less({
-        sourceMap: {
-            sourceMapRootpath: '' // Optional absolute or relative path to your LESS files 
-        }
-    }))
+    .pipe(sourcemaps.init())
+  	.pipe(less())
+  	.pipe(sourcemaps.write("."))
     .pipe(gulp.dest("dist/styles"));
 });
 
