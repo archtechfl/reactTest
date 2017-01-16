@@ -18,7 +18,7 @@ gulp.task('compile-jsx', function () {
 
 function bundle_js(bundler) {
   return bundler.bundle()
-    .pipe(source('app/index.js'))
+    .pipe(source('app/index.jsx'))
     .pipe(buffer())
     .pipe(rename("bundle.js"))
     .pipe(sourcemaps.init({ loadMaps: true }))
