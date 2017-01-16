@@ -8,7 +8,6 @@ var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var merge = require('utils-merge');
 
-var watchify = require('watchify');
 var browserify = require('browserify');
 var babelify = require('babelify');
 

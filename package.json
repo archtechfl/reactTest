@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-test",
+  "name": "react-gulp-test",
   "version": "1.0.0",
   "private": true,
   "description": "A progressive demonstration of basic React JS capabilities",
@@ -10,37 +10,25 @@
   "keywords": [
     "ReactJS",
     "JSX",
-    "Babel",
-    "Webpack"
+    "Babel"
   ],
   "author": "Jeremy Moore",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.21.0",
-    "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.18.0",
     "babelify": "^7.3.0",
-    "browserfy": "^1.0.0",
     "browserify": "^13.3.0",
-    "css-loader": "^0.26.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-less-sourcemap": "^1.4.3",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.4.0",
     "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "style-loader": "^0.13.1",
     "utils-merge": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.8.0",
-    "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2"
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "react": "^15.4.1",
