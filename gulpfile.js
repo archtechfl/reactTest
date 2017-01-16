@@ -12,14 +12,9 @@ var watchify = require('watchify');
 var browserify = require('browserify');
 var babelify = require('babelify');
 
-gulp.task('watchify', function () {
-  var args = merge(watchify.args, { debug: true })
-  var bundler = watchify(browserify('app/index.jsx', args)).transform(babelify)
-  bundle_js(bundler)
-
-  bundler.on('update', function () {
-    bundle_js(bundler)
-  })
+gulp.task('compile-jsx', function () {
+  var bundler = browserify('app/index.jsx').transform(babelify);
+  bundle_js(bundler);
 })
 
 function bundle_js(bundler) {
@@ -47,9 +42,9 @@ gulp.task('watch-less', function () {
 });
 
 gulp.task('watch-jsx', function () {
-   gulp.watch('app/**/*.jsx', ['watchify']);
+   gulp.watch('app/**/*.jsx', ['compile-jsx']);
 });
 
-gulp.task('default', ['watchify', 'compile-less', 'watch-less'],
+gulp.task('default', ['compile-jsx', 'compile-less', 'watch-less', 'watch-jsx'],
     function () {
 });
