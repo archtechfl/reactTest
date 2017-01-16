@@ -6,7 +6,6 @@ var rename = require("gulp-rename");
 
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var merge = require('utils-merge');
 
 var browserify = require('browserify');
 var babelify = require('babelify');
