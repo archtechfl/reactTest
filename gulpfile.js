@@ -6,13 +6,21 @@ var rename = require("gulp-rename");
 
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var merge = require('utils-merge');
 
+var watchify = require('watchify');
 var browserify = require('browserify');
 var babelify = require('babelify');
 
 gulp.task('compile-jsx', function () {
-  var bundler = browserify({entries: ['app/index.jsx'], debug: true}).transform(babelify);
+  var args = merge(watchify.args, { debug: true });
+  var bundler = browserify('app/index.jsx', args).transform(babelify);
   bundle_js(bundler);
+
+  bundler.on('update', function () {
+    bundle_js(bundler)
+  });
+
 })
 
 function bundle_js(bundler) {
@@ -37,10 +45,6 @@ gulp.task('watch-less', function () {
    gulp.watch('app/styles/**/*.less', ['compile-less']);
 });
 
-gulp.task('watch-jsx', function () {
-   gulp.watch('app/**/*.jsx', ['compile-jsx']);
-});
-
-gulp.task('default', ['compile-jsx', 'compile-less', 'watch-less', 'watch-jsx'],
+gulp.task('default', ['compile-jsx', 'compile-less', 'watch-less'],
     function () {
 });

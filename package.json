@@ -28,7 +28,8 @@
     "gulp-sourcemaps": "^2.4.0",
     "utils-merge": "^1.0.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0"
   },
   "dependencies": {
     "react": "^15.4.1",
