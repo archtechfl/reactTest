@@ -14,18 +14,17 @@ var babelify = require('babelify');
 
 gulp.task('compile-jsx', function () {
   var args = merge(watchify.args, { debug: true });
-  var bundler = browserify('app/index.jsx', args).transform(babelify);
+  var bundler = watchify(browserify('app/index.jsx', args)).transform(babelify);
   bundle_js(bundler);
 
   bundler.on('update', function () {
-    bundle_js(bundler)
+    bundle_js(bundler);
   });
-
-})
+});
 
 function bundle_js(bundler) {
   return bundler.bundle()
-    .pipe(source('app/index.jsx'))
+    .pipe(source('app/index.js'))
     .pipe(buffer())
     .pipe(rename("bundle.js"))
     .pipe(sourcemaps.init({ loadMaps: true }))
